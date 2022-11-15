@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --font-roboto: 'Roboto', sans-serif;
+
+  --bg: #040924;
+  --alert-message: #F03E3E;
+
+  --fontColor-principal: #0C3440;
+  --bg-principal: #FFFFFF;
+  --btn-color: #02799D;
+  --btn-hover-color: #075e79;
+  --fontColorText-principal: #00453A;
+  --fontColorPlaceholder: #49505780; 
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--font-roboto);
+}
+
+.container {
+  display: grid;
+  font-family: var(--font-roboto);
+  place-items: center;
+  height: 100vh;
+}
+
+input, button {
+  font-family: var(--font-roboto);
+}
+
+.bloco-imc {
+  background: var(--bg-principal);
+  border-radius: 6px;
+  padding: 3rem 4rem 4rem;
+  margin: 0 auto;
+  max-width: 26.75rem;
+  margin-inline: auto;
+  box-shadow: 0px 2px 25px rgba(255, 255, 255, 0.204);
+}
+
+.bloco-imc h1 {
+  color: var(--fontColor-principal);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bloco-imc form {
+  display: flex;
+  flex-direction: column;
+  width: 18.75rem;
+}
+
+.bloco-imc form label {
+  color: var(--fontColorText-principal);
+  font-size: 0.875rem;
+  margin-bottom: .5rem;
+}
+
+.bloco-imc form input {
+  background: #DCE2E9;
+  border: 1px solid #4950574d;
+  border-radius: 6px;
+  height: 3.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.bloco-imc form input:focus {
+  outline: 1px solid #02799D;
+}
+
+.bloco-imc form input::placeholder {
+  color: #49505780;
+}
+
+.bloco-imc form button {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  background: var(--btn-color);
+  border: none;
+  border-radius: 4px;
+  color: var(--bg-principal);
+  font-weight: 700;
+  font-size: 1rem;
+  height: 3.25rem;
+  margin-top: 1rem;
+  transition: all .2s;
+}
+
+.bloco-imc form button:hover {
+  background: var(--btn-hover-color);
+}
+
+.bloco-modal {
+  background: var(--bg-principal);
+  border-radius: 6px;
+  color: var(--fontColor-principal);
+  padding: 3rem 4rem;
+  text-align: center;
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal .close {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.modal .close:hover {
+  transform: scale(1.1);
+}
+
+.alert-message.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-message {
+  position: absolute;
+  background-color: var(--alert-message);
+  top: 0;
+  left: 0;
+  right: 0;
+  color: var(--bg-principal);
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform .4s;
+}
