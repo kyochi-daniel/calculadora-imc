@@ -7,7 +7,7 @@
 Exercício construído no curso da Explorer da plataforma Rocketseat.<br/>
 Esse exercício se basea em uma calculadora que realiza a conta do IMC de certa pessoa.
 
-[🔗 Clique aqui para acessar](https://kyochi7.github.io/jogo-adivinhacao-js/)
+[🔗 Clique aqui para acessar](https://calculadora-imc-one-delta.vercel.app/)
 
 ## 🧰 Tecnologias
 
